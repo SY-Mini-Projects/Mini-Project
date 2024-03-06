@@ -1,43 +1,39 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
     <div>
       <style>
-    {`
-      .navbar-custom {
-        background-color: #A9A9A9 !important;
-      }
-      .navbar-custom .navbar-brand,
-      .navbar-custom .nav-link {
-        color: white !important;
-      }
-    `}
-  </style>
-<nav class="navbar navbar-expand-lg navbar-custom">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        {`
+          .navbar-custom {
+            background-color: #339966; /* Replace with any hex color you want */
+          }
+          .navbar-custom .navbar-brand,
+          .navbar-custom .nav-link {
+            color: #ffffff; /* This will make the text color white */
+          }
+        `}
+      </style>
+      <nav className="navbar navbar-expand-lg navbar-custom">
+        <div className="container-fluid">
+          <Link className="navbar-brand fs-3 fst-italic" to="#">Maniac</Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="#">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/login">Login</Link>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
   )
 }
