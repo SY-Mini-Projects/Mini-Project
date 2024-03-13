@@ -10,8 +10,11 @@ export default function Navbar() {
             background-color: #339966; /* Replace with any hex color you want */
           }
           .navbar-custom .navbar-brand,
-          .navbar-custom .nav-link {
+          .navbar-custom {
             color: #ffffff; /* This will make the text color white */
+          }
+          .nav-link {
+            color:#d2d2d4;
           }
         `}
       </style>
@@ -24,12 +27,14 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="#">Home</Link>
+                <Link className="nav-link" aria-current="page" to="#">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/login">Login</Link>
               </li>
-              
+              <li className="nav-item">
+                <Link className="nav-link" to="/createuser">SignUp</Link>
+              </li>
             </ul>
           </div>
         </div>
