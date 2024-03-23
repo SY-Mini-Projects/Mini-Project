@@ -13,11 +13,15 @@ app.use((req,res,next) => {
 
 const mongoDB = require('./db');
 mongoDB();
+app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-app.use(express.json());
+
 app.use('/api', require('./Routes/CreateUser'));
+app.use('/api', require('./Routes/DisplayData'));
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
