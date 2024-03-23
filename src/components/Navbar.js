@@ -1,7 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
+const navigate = useNavigate();
+const handleLogout = () => {
+localStorage.removeItem('authtoken');
+navigate('/')
+}
+
   return (
     <div>
       <style>
@@ -25,17 +31,28 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav me-auto mt-1">
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="#">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/" style={{fontSize:"18px",color:"#ffffff"}}>Home</Link>
               </li>
+              {(localStorage.getItem('authtoken'))?
               <li className="nav-item">
-                <Link className="nav-link" to="/login">Login</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/createuser">SignUp</Link>
-              </li>
+              <Link className="nav-link active" aria-current="page" to="/" style={{fontSize:"18px",color:"#ffffff"}}>My Orders</Link>
+            </li>
+            :""}
+
             </ul>
+            {(!localStorage.getItem('authtoken'))?
+            <div className='d-flex'>
+                <Link className="btn mx-1" to="/login" style={{backgroundColor: "#ffffff", color:"#339966"}}><b>Login</b></Link>
+                <Link className="btn mx-1" to="/createuser" style={{backgroundColor: "#ffffff",color:"#339966"}}><b>SignUp</b></Link>
+            
+            </div>
+            :<div>
+            <div className='btn mx-2'style={{backgroundColor: "#ffffff", color:"#339966"}}><b>My Cart</b></div>
+            <div className='btn mx-2'style={{backgroundColor: "#ffffff", color:"#c70808"}} onClick={handleLogout}><b>Logout</b></div>
+            </div>
+            }
           </div>
         </div>
       </nav>
