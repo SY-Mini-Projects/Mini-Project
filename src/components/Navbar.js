@@ -47,7 +47,7 @@ navigate('/')
               </li>
               {(localStorage.getItem('authtoken'))?
               <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/" style={{fontSize:"18px",color:"#ffffff"}}>My Orders</Link>
+              <Link className="nav-link active" aria-current="page" to="/myOrder" style={{fontSize:"18px",color:"#ffffff"}}>My Orders</Link>
             </li>
             :""}
 

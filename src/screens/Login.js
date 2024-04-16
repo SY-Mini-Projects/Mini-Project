@@ -24,6 +24,7 @@ const handleSubmit = async(e) => {
         alert('Enter Correct Credentials')
     }
     if(json.success){
+      localStorage.setItem('userEmail',credentials.email)
       localStorage.setItem('authtoken',json.authToken)
       localStorage.getItem('authtoken')
         navigate('/')
