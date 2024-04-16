@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../Modal';
 import { Link,useNavigate } from 'react-router-dom'
-
+import { Badge } from 'react-bootstrap'
+import Cart from '../screens/Cart';
+import { useCart } from './contextReducer';
 export default function Navbar() {
+  const [cartView, setCartView] = useState(false);
+  let data = useCart();
 const navigate = useNavigate();
 const handleLogout = () => {
 localStorage.removeItem('authtoken');
@@ -21,6 +26,11 @@ navigate('/')
           }
           .nav-link {
             color:#d2d2d4;
+          }
+          .my-badge {
+            color: white;
+            background-color: red;
+            /* Add more CSS properties as needed */
           }
         `}
       </style>
@@ -49,7 +59,11 @@ navigate('/')
             
             </div>
             :<div>
-            <div className='btn mx-2'style={{backgroundColor: "#ffffff", color:"#339966"}}><b>My Cart</b></div>
+            <div className='btn mx-2'style={{backgroundColor: "#ffffff", color:"#339966"}} onClick={()=>{setCartView(true)}}>
+              <b>My Cart {" "}</b>
+              <Badge pill bg="success" className='my-badge'>{data.length}</Badge>
+              </div>
+              {cartView? <Modal onClose={()=>setCartView(false)} ><Cart /> </Modal>:null}
             <div className='btn mx-2'style={{backgroundColor: "#ffffff", color:"#c70808"}} onClick={handleLogout}><b>Logout</b></div>
             </div>
             }

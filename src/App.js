@@ -8,9 +8,11 @@ import {
 import Login from './screens/Login';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import Signup from './screens/Signup';
+import { CartProvider } from './components/contextReducer';
 function App() {
   return (
-    <Router>
+    <CartProvider>
+       <Router>
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,6 +21,9 @@ function App() {
       </Routes>
     </div>
     </Router>
+    </CartProvider>
+   
+  
   );
 }
 

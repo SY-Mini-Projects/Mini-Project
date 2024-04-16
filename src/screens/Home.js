@@ -117,9 +117,9 @@ export default function Home() {
             ? foodItem.filter((item)=>(item.CategoryName === data.CategoryName) && item.name.toLowerCase().includes(search.toLowerCase())).map((filteritems) => {
               return(
                 <div key={filteritems._id} className="col-12 col-md-6 col-lg-3">
-                  <Card foodName={filteritems.name}
+                  <Card foodItem={filteritems}
                   options={filteritems.options[0]}
-                  imgSrc={filteritems.img}
+                  // imgSrc={filteritems.img}
                   ></Card>
                 </div>
               )
