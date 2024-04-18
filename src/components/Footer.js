@@ -1,41 +1,55 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Footer.css"; // Import CSS file for footer styling
 
 export default function Footer() {
   return (
-    <div>
+    <footer className="footer">
       <link
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
         rel="stylesheet"
       ></link>
-      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div className="col-md-4 d-flex align-items-center">
-          <Link
-            to="/"
-            class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
-            previewlistener="true"
-          ></Link>
-          <span className="text-muted">© 2023 Maniac, Inc</span>
+      <div className="container">
+        <div className="footer-content">
+          <div className="logo-section">
+            <Link to="/" className="logo-link text-decoration-none">
+              <h1 className="logo">Maniac</h1>
+            </Link>
+            <p className="text-muted">© 2023 Maniac, Inc</p>
+          </div>
+          <div className="social-media-section">
+            <ul className="social-media-list list-unstyled d-flex mb-0">
+              <li>
+                <a href="#" className="text-decoration-none text-white">
+                  <i className="bi bi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-decoration-none text-white">
+                  <i className="bi bi-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-decoration-none text-white">
+                  <i className="bi bi-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="subscribe-form">
+            <h5 className="mb-3">Subscribe to our Newsletter</h5>
+            <form className="d-flex">
+              <input
+                className="form-control me-2 subscribe-input"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <button className="btn btn-light" type="submit">Subscribe</button>
+            </form>
+          </div>
         </div>
-
-        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex me-3">
-          <li className="ms-3 me-2">
-            <a className="text-muted" href="#">
-              <i className="bi bi-twitter"></i>
-            </a>
-          </li>
-          <li className="ms-3 me-2">
-            <a className="text-muted" href="#">
-              <i className="bi bi-instagram"></i>
-            </a>
-          </li>
-          <li className="ms-3 me-2">
-            <a className="text-muted" href="#">
-              <i className="bi bi-facebook"></i>
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 }
+

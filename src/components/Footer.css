@@ -1,0 +1,58 @@
+.footer {
+    background: linear-gradient(to right, #339966, #003333);
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-section {
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+  
+  .logo {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .social-media-section {
+    height: 15px;
+    max-width: 300px;
+  }
+  
+  .social-media-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-media-list li {
+    margin-right: 15px;
+  }
+  
+  .subscribe-form {
+    flex: 1 1 100%;
+    max-width: 400px;
+  }
+  
+  .subscribe-input {
+    width: 70%;
+  }
+  
+  .subscribe-form button {
+    background-color: #ffffff;
+    color: #339966;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #28a745;
+    color: #ffffff;
+  }
+  
