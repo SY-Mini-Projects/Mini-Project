@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI='mongodb+srv://HuzaifaAnsari0:mern123@maniac.4igijfe.mongodb.net/Maniac_MERN?retryWrites=true&w=majority&appName=Maniac'
+const mongoURI='mongodb+srv://kaushalbhadra15:Kuntal120598@cluster0.h9onpih.mongodb.net/gofoodmern?retryWrites=true&w=majority&appName=Cluster0';
 
 const mongoDB = async() => {
     await mongoose.connect(mongoURI);
@@ -16,7 +16,6 @@ const mongoDB = async() => {
     } else {
         global.food_items = fetchedData;
         global.foodCategory = fetchedCategory;
-        
     }
 }
 

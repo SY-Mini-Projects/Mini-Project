@@ -1,6 +1,7 @@
 import React, { useRef,useEffect } from 'react'
 import { useState } from 'react';
 import { useCart, useDispatchCart } from './contextReducer';
+import "./Card.css"
 export default function Card(props) {
   let dispatch = useDispatchCart();
   let data = useCart();
@@ -48,47 +49,53 @@ export default function Card(props) {
   // totval += finalPrice;
   // console.log(totval)
   return (
-    <div>
-      <div>
-        <div
-          className="card mt-3 mx-auto"
-          style={{ "width": "18rem", "maxHeight": "430px" }}
-        >
-          <img src={props.foodItem.img} className="card-img-top" alt="..."  style={{width: "100%",height:"200px", objectFit:"cover"}}/>
-          <div className="card-body">
-            <h5 className="card-title">{props.foodItem.name}</h5>
-            <p className="card-text">This is my card</p>
-            <div className="container w-100">
-              <select
-                className="m-2 h-100 rounded" onChange={(e)=>setQty(e.target.value)}
-              >
-                {Array.from(Array(6), (e, i) => {
-                  return (
+    <div className="container">
+  <div className="row justify-content-center">
+    <div className="col-lg-12">
+      <div className="card-container">
+        <div className="card border-0 shadow-lg" style={{ maxWidth: "800px" }}>
+          <img
+            src={props.foodItem.img}
+            className="card-img-top rounded-top"
+            alt={props.foodItem.name}
+            style={{ width: "100%", height: "250px", objectFit: "cover" }}
+          />
+          <div className="card-body d-flex flex-column justify-content-between" style={{ height: "250px" }}>
+            <div>
+              <h5 className="card-title text-center text-white">{props.foodItem.name}</h5>
+            </div>
+            <div className="row justify-content-center align-items-center">
+              <div className="col-md-4">
+                <select className="form-select mb-3 text-white" onChange={(e) => setQty(e.target.value)}>
+                  {Array.from(Array(6), (e, i) => (
                     <option key={i + 1} value={i + 1}>
                       {i + 1}
                     </option>
-                  );
-                })}
-              </select>
-              <select className="m-2 h-100 bg-success rounded" ref={priceRef} onChange={(e)=>setSize(e.target.value)}>
-              
-                {priceOptions.map((data)=>{
-                  return(
+                  ))}
+                </select>
+              </div>
+              <div className="col-md-4">
+                <select className="form-select mb-3 text-white" ref={priceRef} onChange={(e) => setSize(e.target.value)}>
+                  {priceOptions.map((data) => (
                     <option key={data} value={data}>
                       {data}
                     </option>
-                  )
-                })}
-              </select>
-
-              <div className="d-inline">₹{finalPrice}/-</div>
+                  ))}
+                </select>
+              </div>
+              <div className="col-md-4 text-white">
+                <div className="fw-bold fs-5">₹{finalPrice}/</div>
+              </div>
             </div>
-            <hr>
-            </hr>
-            <button className={"btn btn-success justify-center ms-2"} onClick={handleAddToCart}>Add to Cart</button>
+          </div>
+          <div className="d-grid">
+            <button className="btn btn-success" onClick={handleAddToCart}>Add to Cart</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   )
 }
