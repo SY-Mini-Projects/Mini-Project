@@ -4,6 +4,7 @@ import { Link,useNavigate } from 'react-router-dom'
 import { Badge } from 'react-bootstrap'
 import Cart from '../screens/Cart';
 import { useCart } from './contextReducer';
+import "./Navbar.css"
 export default function Navbar() {
   const [cartView, setCartView] = useState(false);
   let data = useCart();

@@ -1,0 +1,48 @@
+.navbar-custom {
+    background: linear-gradient(to right, #339966, #003333);
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .navbar-brand {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .nav-link {
+    color: #d2d2d4;
+    transition: color 0.5s, font-size 0.3s, font-weight 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  .my-badge {
+    color: white;
+    background-color: red;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* Add more CSS properties as needed */
+  }
+  
+  .btn {
+    transition: background-color 0.5s, color 0.5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .btn:hover {
+    background-color: #339966;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .navbar-toggler-icon {
+    filter: invert(1);
+    transition: filter 0.5s;
+  }
+  
+  .navbar-toggler-icon:hover {
+    filter: invert(0.5);
+  }
