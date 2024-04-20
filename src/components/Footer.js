@@ -1,55 +1,76 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Footer.css"; // Import CSS file for footer styling
+import React from 'react';
+import "./Footer.css";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="footer">
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-        rel="stylesheet"
-      ></link>
-      <div className="container">
-        <div className="footer-content">
-          <div className="logo-section">
-            <Link to="/" className="logo-link text-decoration-none">
-              <h1 className="logo">Maniac</h1>
-            </Link>
-            <p className="text-muted">© 2023 Maniac, Inc</p>
-          </div>
-          <div className="social-media-section">
-            <ul className="social-media-list list-unstyled d-flex mb-0">
-              <li>
-                <a href="#" className="text-decoration-none text-white">
-                  <i className="bi bi-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-decoration-none text-white">
-                  <i className="bi bi-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-decoration-none text-white">
-                  <i className="bi bi-facebook"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="subscribe-form">
-            <h5 className="mb-3">Subscribe to our Newsletter</h5>
-            <form className="d-flex">
-              <input
-                className="form-control me-2 subscribe-input"
-                type="email"
-                placeholder="Enter your email"
-              />
-              <button className="btn btn-light" type="submit">Subscribe</button>
-            </form>
+    <>
+      <div className="footer">
+        <div className="sb_footer section_padding">
+          <div className="sb_footer-links">
+            <div className="sb_footer-links-div">
+              <h4>Company</h4>
+              <a href="/employer">
+                <p>employer</p>
+              </a>
+              <a href="/healthplan">
+                <p>health plan</p>
+              </a>
+              <a href="/individual">
+                <p>individual</p>
+              </a>
+            </div>
+            <div className="sb_footer-links-div">
+              <h4>Company</h4>
+              <a href="/employer">
+                <p>employer</p>
+              </a>
+              <a href="/healthplan">
+                <p>health plan</p>
+              </a>
+              <a href="/individual">
+                <p>individual</p>
+              </a>
+            </div>
+            <div className="sb_footer-links-div">
+              <h4>Company</h4>
+              <a href="/employer">
+                <p>employer</p>
+              </a>
+              <a href="/healthplan">
+                <p>health plan</p>
+              </a>
+              <a href="/individual">
+                <p>individual</p>
+              </a>
+            </div>
+            <div className="sb_footer-links-div">
+              <h4>Follow us on</h4>
+              <div className='socialmedia'>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+            <hr></hr>
+            <div className="sb_footer-below">
+              <div className="sb_footer-copyright">
+                <p>
+                  @{new Date().getFullYear()} Maniac All rights reserved.
+                </p>
+              </div>
+              <div className="sb_footer-below-links">
+                <a href="/terms"><div><p>Terms & Conditions</p></div></a>
+                <a href="/terms"><div><p>Privacy</p></div></a>
+                <a href="/terms"><div><p>Security</p></div></a>
+                <a href="/terms"><div><p>Cookie declaration</p></div></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
+    </>
   );
-}
+};
 
+export default Footer;

@@ -50,7 +50,7 @@ export default function Card(props) {
   // console.log(totval)
   return (
     <div className="container">
-  <div className="row justify-content-center">
+  <div className="row justify-content-center" style={{"marginBottom":"40px"}}>
     <div className="col-lg-12">
       <div className="card-container">
         <div className="card border-0 shadow-lg" style={{ maxWidth: "800px" }}>
