@@ -1,79 +1,52 @@
 import React from "react";
-
+import "./Carousel.css";
 export default function Carousel() {
   return (
-    <div>
-      <div
-        id="carouselExampleFade"
-        className="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner" id="carousel" style={{objectFit:"contain !important"}}>
-          <div className="carousel-caption" style={{ zIndex: "10" }}>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-success text-light fw-bold" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-
+      <div className="carousel-container">
+        <div className="carousel" id="carouselExampleFade">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img
                 src="https://source.unsplash.com/random/900x500/?burger"
-                className="d-block w-100"
-                alt="..."
-                style={{ filter: "brightness(30%)" }}
+                className="carousel-image"
+                alt="Burger"
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://source.unsplash.com/random/900x500/?pizza"
-                className="d-block w-100"
-                alt="..."
-                style={{ filter: "brightness(30%)" }}
+                className="carousel-image"
+                alt="Pizza"
               />
             </div>
             <div className="carousel-item">
               <img
                 src="https://source.unsplash.com/random/600x250/?fries"
-                className="d-block w-100"
-                alt="..."
+                className="carousel-image"
+                alt="Fries"
               />
             </div>
           </div>
+          <button className="carousel-control-prev" type="button" onClick={prevSlide}>
+            &lsaquo;
+          </button>
+          <button className="carousel-control-next" type="button" onClick={nextSlide}>
+            &rsaquo;
+          </button>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+        <div className="search-container">
+          <form className="search-form" onSubmit={handleSubmit}>
+            <input
+              className="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button className="search-button" type="submit">Search</button>
+          </form>
+        </div>
       </div>
-    </div>
-  );
+  );    
+  
 }

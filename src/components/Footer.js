@@ -1,41 +1,76 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import "./Footer.css";
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <div>
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-        rel="stylesheet"
-      ></link>
-      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div className="col-md-4 d-flex align-items-center">
-          <Link
-            to="/"
-            class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
-            previewlistener="true"
-          ></Link>
-          <span className="text-muted">© 2023 Maniac, Inc</span>
+    <>
+      <div className="footer">
+        <div className="sb_footer section_padding">
+          <div className="sb_footer-links">
+            <div className="sb_footer-links-div">
+              <h4>Company</h4>
+              <a href="/employer">
+                <p>About</p>
+              </a>
+              <a href="/healthplan">
+                <p>Careers</p>
+              </a>
+              <a href="/individual">
+                <p>Team</p>
+              </a>
+            </div>
+            <div className="sb_footer-links-div">
+              <h4>Contact us</h4>
+              <a href="/employer">
+                <p>Help & support</p>
+              </a>
+              <a href="/healthplan">
+                <p>Partner with us</p>
+              </a>
+              <a href="/individual">
+                <p>Ride with us</p>
+              </a>
+            </div>
+            <div className="sb_footer-links-div">
+              <h4>We deliver to</h4>
+              <a href="/employer">
+                <p>Mumbai</p>
+              </a>
+              <a href="/healthplan">
+                <p>Bangalore</p>
+              </a>
+              <a href="/individual">
+                <p>Delhi</p>
+              </a>
+            </div>
+            <div className="sb_footer-links-div">
+              <h4>Follow us on</h4>
+              <div className='socialmedia'>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+              </div>
+            </div>
+            <hr></hr>
+            <div className="sb_footer-below">
+              <div className="sb_footer-copyright">
+                <p>
+                  @{new Date().getFullYear()} Maniac All rights reserved.
+                </p>
+              </div>
+              <div className="sb_footer-below-links">
+                <a href="/terms"><div><p>Terms & Conditions</p></div></a>
+                <a href="/terms"><div><p>Privacy</p></div></a>
+                <a href="/terms"><div><p>Security</p></div></a>
+                <a href="/terms"><div><p>Cookie declaration</p></div></a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex me-3">
-          <li className="ms-3 me-2">
-            <a className="text-muted" href="#">
-              <i className="bi bi-twitter"></i>
-            </a>
-          </li>
-          <li className="ms-3 me-2">
-            <a className="text-muted" href="#">
-              <i className="bi bi-instagram"></i>
-            </a>
-          </li>
-          <li className="ms-3 me-2">
-            <a className="text-muted" href="#">
-              <i className="bi bi-facebook"></i>
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+      </div>
+    </>
   );
-}
+};
+
+export default Footer;
