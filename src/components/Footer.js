@@ -10,37 +10,37 @@ const Footer = () => {
             <div className="sb_footer-links-div">
               <h4>Company</h4>
               <a href="/employer">
-                <p>About</p>
+                <p>employer</p>
               </a>
               <a href="/healthplan">
-                <p>Careers</p>
+                <p>health plan</p>
               </a>
               <a href="/individual">
-                <p>Team</p>
+                <p>individual</p>
               </a>
             </div>
             <div className="sb_footer-links-div">
-              <h4>Contact us</h4>
+              <h4>Company</h4>
               <a href="/employer">
-                <p>Help & support</p>
+                <p>employer</p>
               </a>
               <a href="/healthplan">
-                <p>Partner with us</p>
+                <p>health plan</p>
               </a>
               <a href="/individual">
-                <p>Ride with us</p>
+                <p>individual</p>
               </a>
             </div>
             <div className="sb_footer-links-div">
-              <h4>We deliver to</h4>
+              <h4>Company</h4>
               <a href="/employer">
-                <p>Mumbai</p>
+                <p>employer</p>
               </a>
               <a href="/healthplan">
-                <p>Bangalore</p>
+                <p>health plan</p>
               </a>
               <a href="/individual">
-                <p>Delhi</p>
+                <p>individual</p>
               </a>
             </div>
             <div className="sb_footer-links-div">
