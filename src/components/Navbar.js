@@ -51,7 +51,9 @@ navigate('/')
               <Link className="nav-link active" aria-current="page" to="/myOrder" style={{fontSize:"18px",color:"#ffffff"}}>My Orders</Link>
             </li>
             :""}
-
+                <li className="nav-item">
+      <Link className="nav-link active" aria-current="page" to="/feedback" style={{fontSize:"18px",color:"#ffffff"}}>Feedback</Link>
+    </li>
             </ul>
             {(!localStorage.getItem('authtoken'))?
             <div className='d-flex'>
