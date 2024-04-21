@@ -37,14 +37,14 @@ navigate('/')
       </style>
       <nav className="navbar navbar-expand-lg navbar-custom">
         <div className="container-fluid">
-          <Link className="navbar-brand fs-3 fst-italic" to="#">Maniac</Link>
+          <Link className="navbar-brand fs-3 fst-italic" to="http://localhost:3000/Home2">Maniac</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto mt-1">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/" style={{fontSize:"18px",color:"#ffffff"}}>Home</Link>
+                <Link className="nav-link active" aria-current="page" to="/Home2" style={{fontSize:"18px",color:"#ffffff"}}>Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/" style={{fontSize:"18px",color:"#ffffff"}}>Menu</Link>
