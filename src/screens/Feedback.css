@@ -1,33 +1,126 @@
+/* Feedback.css */
+
+/* Feedback Page Styles */
+.feedback-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Full Page Background Color */
+.background-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2ecc71;
+  z-index: -1;
+  animation: colorChange 15s infinite alternate;
+}
+
+/* Confetti Animation */
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.pngkey.com/png/full/15-158153_confetti-transparent-background-confetti-png-transparent-background.png');
+  z-index: -2;
+  animation: confettiFall 10s linear infinite;
+}
+
+/* Feedback Text Styles */
+.feedback-text {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Feedback Container Styles */
 .feedback-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease;
+}
+
+/* Feedback Form Styles */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 20px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.feedback-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #27ae60;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.feedback-form button:hover {
+  background-color: #219653;
+}
+
+/* Background Color Animation */
+@keyframes colorChange {
+  0% {
+    background-color: #2ecc71;
   }
-  
-  .feedback-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-    background-color: white;
+  50% {
+    background-color: #3498db;
   }
-  
-  .feedback-form input, .feedback-form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+  100% {
+    background-color: #2ecc71;
   }
-  
-  .feedback-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
+}
+
+/* Confetti Fall Animation */
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-100%);
   }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
