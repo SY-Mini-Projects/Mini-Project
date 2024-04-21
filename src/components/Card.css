@@ -1,10 +1,11 @@
 .card-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: stretch;
-  
-  }
+  width: 320px; /* Adjust the width as per your requirement */
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  margin: auto; /* Center the card container horizontally */
+}
+
   
   .card {
     border-radius: 20px;
